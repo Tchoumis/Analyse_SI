@@ -28,14 +28,14 @@ L'analyse a été réalisée dans le cadre du projet TP7 de Diginamic, conformé
 
 Le 13/03/2025, une connexion à l'interface ODOO a été possible avec l'utilisateur "Marc Demo". Cette connexion a révélé une interface presque vide, sans applications ou modules visibles. Quelques liens étaient accessibles, mais l'interface semblait incomplète ou en cours de déploiement.
 
-![](/Rapports/ODOO/img/1.png)
+![](https://github.com/Tchoumis/Analyse_SI/blob/main/Rapports/ODOO/img/1.png)
 
-![](Rapports/ODOO/img/2.png)
+![](https://github.com/Tchoumis/Analyse_SI/blob/main/Rapports/ODOO/img/2.png)
 
 
 Le 14/03/2025, des changements ont été observés sur l'interface. La page de connexion traditionnelle n'était plus accessible, et une redirection vers la page de création de base de données a été mise en place. Ceci indique que le système était probablement en cours de configuration ou de redéploiement.
 
-![](Rapports/ODOO/img/3.png)
+![](https://github.com/Tchoumis/Analyse_SI/blob/main/Rapports/ODOO/img/3.png)
 
 
 ### Analyse de l'interface ODOO
@@ -59,7 +59,7 @@ L'interface observée le 14/03/2025 montre:
 Cette transition indique une probable réinitialisation ou reconfiguration du système ODOO, possiblement suite à une maintenance ou une mise à jour.
 
 ### Analyse de l'outil Wappalyzer
-![](Rapports/ODOO/img/4.png)
+![](https://github.com/Tchoumis/Analyse_SI/blob/main/Rapports/ODOO/img/4.png)
 
 L'analyse via Wappalyzer a révélé des informations précieuses sur les technologies utilisées:
 - **Sécurité**: Présence de HSTS (HTTP Strict Transport Security)
@@ -77,14 +77,14 @@ Ces informations permettent de mieux comprendre la pile technologique sur laquel
 
 Le test de ping a confirmé que le serveur ODOO est accessible avec un temps de réponse moyen de 68 ms et sans perte de paquets, démontrant une bonne disponibilité du service.
 
-![](Rapports/ODOO/img/5.png)
+![](https://github.com/Tchoumis/Analyse_SI/blob/main/Rapports/ODOO/img/5.png)
 
 
 ### Scan des ports (nmap)
 
 Le scan nmap a révélé une infrastructure complexe avec de multiples services exposés:
 
-![](Rapports/ODOO/img/6.png)
+![](https://github.com/Tchoumis/Analyse_SI/blob/main/Rapports/ODOO/img/6.png)
 
 
 Cette architecture montre:
@@ -104,7 +104,7 @@ Slowloris est une attaque de déni de service (DoS) qui fonctionne en établissa
 
 L'attaque exploite le comportement des serveurs web qui maintiennent une connexion ouverte jusqu'à ce qu'une requête HTTP complète soit reçue ou qu'un délai d'attente soit atteint. Slowloris envoie délibérément des requêtes HTTP partielles et envoie périodiquement des en-têtes HTTP supplémentaires pour empêcher le déclenchement du délai d'attente.
 
-![](Rapports/ODOO/img/7.png)
+![](https://github.com/Tchoumis/Analyse_SI/blob/main/Rapports/ODOO/img/7.png)
 
 
 **Détails techniques**:
@@ -120,12 +120,12 @@ Cette vulnérabilité peut rendre l'interface ODOO inaccessible, empêchant les 
 **Preuve de concept**:
 Un test a été réalisé avec l'outil Slowloris sur le port 4848:
 
-![](Rapports/ODOO/img/8.png)
+![](https://github.com/Tchoumis/Analyse_SI/blob/main/Rapports/ODOO/img/8.png)
 
 
 Après quelques minutes d'exécution, l'accès au serveur a été perturbé, comme le montre l'erreur "Hmm. We're having trouble finding that site" lors des tentatives de connexion simultanées.
 
-![](Rapports/ODOO/img/9.png)
+![](https://github.com/Tchoumis/Analyse_SI/blob/main/Rapports/ODOO/img/9.png)
 
 
 ### Vulnérabilité phpMyAdmin (CVE-2005-3299)
@@ -133,7 +133,7 @@ Après quelques minutes d'exécution, l'accès au serveur a été perturbé, com
 **Description détaillée**:
 Cette vulnérabilité d'inclusion de fichiers locaux (LFI) affecte phpMyAdmin versions 2.6.4 et 2.6.4-pl1. Elle se produit dans le script grab_globals.lib.php qui permet aux attaquants d'inclure des fichiers locaux arbitraires via le paramètre $_redirect, possiblement en exploitant le tableau subform.
 
-![](Rapports/ODOO/img/10.png)
+![](https://github.com/Tchoumis/Analyse_SI/blob/main/Rapports/ODOO/img/10.png)
 
 **Détails techniques**:
 - **Vecteur CVSS**: (AV:N/AC:L/Au:N/C:N/I:P/A:N)
@@ -147,16 +147,16 @@ Des recherches ont été effectuées pour localiser phpMyAdmin sur différents p
 http://45.66.221.1/phpmyadmin/
 http://45.66.221.1:8080/phpmyadmin/
 ```
-![](Rapports/ODOO/img/11.png)
+![](https://github.com/Tchoumis/Analyse_SI/blob/main/Rapports/ODOO/img/11.png)
 
-![](Rapports/ODOO/img/12.png)
+![](https://github.com/Tchoumis/Analyse_SI/blob/main/Rapports/ODOO/img/12.png)
 
 
 Les tests ont montré que phpMyAdmin n'était pas accessible sur les chemins standards, mais le serveur retournait des erreurs 404 (Not Found) ou 500 (Internal Server Error) plutôt que de refuser la connexion, ce qui suggère que le serveur web traite les requêtes mais que l'application n'est pas installée à ces emplacements.
 
 ### Serveur Node.js Express non sécurisé
 
-![](Rapports/ODOO/img/13.png)
+![](https://github.com/Tchoumis/Analyse_SI/blob/main/Rapports/ODOO/img/13.png)
 
 **Description détaillée**:
 Le scan Nikto sur le port 12174 a révélé un serveur Node.js Express présentant de multiples vulnérabilités potentielles:
@@ -179,7 +179,7 @@ Si cette application Node.js fait partie de l'écosystème ODOO (par exemple, co
 **Exploration supplémentaire**:
 Une tentative de cartographie des répertoires a été effectuée avec Gobuster:
 
-![](Rapports/ODOO/img/14.png)
+![](https://github.com/Tchoumis/Analyse_SI/blob/main/Rapports/ODOO/img/14.png)
 
 Cette analyse n'a pas révélé de chemins sensibles accessibles, mais a confirmé que le service répond avec des codes d'erreur 404 pour les ressources inexistantes.
 
@@ -187,7 +187,7 @@ Cette analyse n'a pas révélé de chemins sensibles accessibles, mais a confirm
 
 L'analyse DNS a permis de découvrir plusieurs sous-domaines associés au serveur principal:
 
-![](Rapports/ODOO/img/15.png)
+![](https://github.com/Tchoumis/Analyse_SI/blob/main/Rapports/ODOO/img/15.png)
 
 
 Cette découverte est significative car elle révèle:
@@ -206,12 +206,12 @@ L'existence de ces sous-domaines élargit la surface d'attaque potentielle et n�
 
 Des tentatives de connexion au serveur FTP ont été effectuées:
 
-![](Rapports/ODOO/img/16.png)
+![](https://github.com/Tchoumis/Analyse_SI/blob/main/Rapports/ODOO/img/16.png)
 
 
 Le serveur FTP n'autorise pas les connexions anonymes, ce qui est une bonne pratique de sécurité. Des tentatives de force brute ont également été réalisées avec Metasploit sans succès:
 
-![](Rapports/ODOO/img/17.png)
+![](https://github.com/Tchoumis/Analyse_SI/blob/main/Rapports/ODOO/img/17.png)
 
 
 
@@ -219,7 +219,7 @@ Le serveur FTP n'autorise pas les connexions anonymes, ce qui est une bonne prat
 
 L'énumération des utilisateurs SSH a été tentée avec Metasploit:
 
-![](Rapports/ODOO/img/18.png)
+![](https://github.com/Tchoumis/Analyse_SI/blob/main/Rapports/ODOO/img/18.png)
 
 
 Cette analyse a révélé l'existence de l'utilisateur 'root' sur le système, ce qui constitue une information précieuse pour d'éventuelles tentatives d'accès ultérieures.
@@ -228,7 +228,7 @@ Cette analyse a révélé l'existence de l'utilisateur 'root' sur le système, c
 
 L'analyse des en-têtes HTTP a fourni des informations importantes sur la configuration du serveur:
 
-![](Rapports/ODOO/img/19.png)
+![](https://github.com/Tchoumis/Analyse_SI/blob/main/Rapports/ODOO/img/19.png)
 
 
 Points notables:
@@ -239,7 +239,7 @@ Points notables:
 
 L'analyse SSL avec `testssl.sh` a montré une configuration robuste:
 
-![](Rapports/ODOO/img/20.png)
+![](https://github.com/Tchoumis/Analyse_SI/blob/main/Rapports/ODOO/img/20.png)
 
 
 Détails:
@@ -253,7 +253,7 @@ Cette configuration SSL solide est un point fort de l'installation.
 
 Des tentatives d'accès à ODOO ont été effectuées sur différents ports:
 
-![](Rapports/ODOO/img/21.png)
+![](https://github.com/Tchoumis/Analyse_SI/blob/main/Rapports/ODOO/img/21.png)
 
 
 Ces tests n'ont pas retourné de résultats positifs, suggérant que l'interface ODOO n'est plus accessible directement depuis l'extérieur ou a été reconfigurée. Cela pourrait être:
@@ -394,18 +394,18 @@ Sur la base de l'analyse effectuée, voici les recommandations détaillées pour
 Pour visualiser l'architecture et les flux d'informations du système ODOO, voici plusieurs diagrammes explicatifs.
 
 ### Diagramme d'architecture du système
-![](Rapports/ODOO/diagrams/Diagramme d'architecture du système.png)
+![](https://github.com/Tchoumis/Analyse_SI/blob/main/Rapports/ODOO/diagrams/Diagramme%20d'architecture%20du%20syst%C3%A8me.png)
 
 
 
 
 ### Diagramme des flux d'information
-![](Rapports/ODOO/diagrams/Diagramme des flux d'information.png)
+![](https://github.com/Tchoumis/Analyse_SI/blob/main/Rapports/ODOO/diagrams/Diagramme%20des%20flux%20d'information.png)
 
 
 
 ### Diagramme des vulnérabilités identifiées
-![](Rapports/ODOO/diagrams/Diagramme des vulnérabilités.png)
+![](https://github.com/Tchoumis/Analyse_SI/blob/main/Rapports/ODOO/diagrams/Diagramme%20des%20vuln%C3%A9rabilit%C3%A9s.png)
 
 
 
