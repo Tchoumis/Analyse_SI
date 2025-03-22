@@ -25,7 +25,7 @@ Pour chaque requête, le script affiche uniquement le code de statut HTTP renvoy
 
 ## Exemple de sortie
 
-![](\ODOO\img\script.png)
+![](https://github.com/Tchoumis/Analyse_SI/blob/main/Rapports/ODOO/img/script.png)
 
 
 ## Avantages
