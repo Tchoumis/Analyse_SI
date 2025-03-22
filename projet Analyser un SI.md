@@ -15,7 +15,7 @@ Ce dépôt contient les analyses du système d'information dans le cadre du TP7 
 
 L'analyse a porté sur la plateforme ODOO déployée sur Hidora avec l'infrastructure suivante :
 
-![](http://localhost:3000/uploads/8f8a4b84-e2ff-467a-a354-c232a5703145.png)
+![](https://github.com/Tchoumis/Analyse_SI/blob/main/Rapports/ODOO/img/plat_odoo.png)
 
 
 #### Vulnérabilités découvertes
