@@ -394,18 +394,18 @@ Sur la base de l'analyse effectuée, voici les recommandations détaillées pour
 Pour visualiser l'architecture et les flux d'informations du système ODOO, voici plusieurs diagrammes explicatifs.
 
 ### Diagramme d'architecture du système
-![](https://github.com/Tchoumis/Analyse_SI/blob/main/Rapports/ODOO/diagrams/Diagramme%20d'architecture%20du%20syst%C3%A8me.png)
+![](https://github.com/Tchoumis/Analyse_SI/blob/main/Rapports/ODOO/diagrams/Diagramme%20d%E2%80%99architecture%20du%20syst%C3%A8me.jpeg)
 
 
 
 
 ### Diagramme des flux d'information
-![](https://github.com/Tchoumis/Analyse_SI/blob/main/Rapports/ODOO/diagrams/Diagramme%20des%20flux%20d'information.png)
+![](https://github.com/Tchoumis/Analyse_SI/blob/main/Rapports/ODOO/diagrams/Diagramme%20des%20flux%20d%E2%80%99information.jpeg)
 
 
 
 ### Diagramme des vulnérabilités identifiées
-![](https://github.com/Tchoumis/Analyse_SI/blob/main/Rapports/ODOO/diagrams/Diagramme%20des%20vuln%C3%A9rabilit%C3%A9s.png)
+![](https://github.com/Tchoumis/Analyse_SI/blob/main/Rapports/ODOO/diagrams/Diagramme%20des%20flux%20d%E2%80%99information.jpeg)
 
 
 
