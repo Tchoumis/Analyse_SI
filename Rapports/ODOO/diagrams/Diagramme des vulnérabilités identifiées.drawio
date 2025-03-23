@@ -1,0 +1,76 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" version="26.1.1">
+  <diagram name="Page-1" id="CbWKgJd46xCBiHZtYTZR">
+    <mxGraphModel dx="1434" dy="826" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="pMdDh9pp7wWAEe4GUN-L-1" value="&amp;nbsp;VULNÉRABILITÉS IDENTIFIÉES - ODOO&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="40" width="280" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pMdDh9pp7wWAEe4GUN-L-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="pMdDh9pp7wWAEe4GUN-L-2" target="pMdDh9pp7wWAEe4GUN-L-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pMdDh9pp7wWAEe4GUN-L-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="pMdDh9pp7wWAEe4GUN-L-2" target="pMdDh9pp7wWAEe4GUN-L-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pMdDh9pp7wWAEe4GUN-L-2" value="Vulnérabilité Slowloris&lt;div&gt;CVE-2007-6750&lt;/div&gt;&lt;div&gt;Score: MEDIUM (5.0)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="154" y="133" width="210" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="pMdDh9pp7wWAEe4GUN-L-3" value="Déni de service (DoS)&lt;div&gt;Interface ODOO&amp;nbsp;&amp;nbsp;inaccessible&amp;nbsp;&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="494" y="138" width="205" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="pMdDh9pp7wWAEe4GUN-L-5" value="IMPACT" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="390" y="147" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pMdDh9pp7wWAEe4GUN-L-6" value="&lt;div&gt;Serveurs Web&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;(OpenResty/Nginx)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Ports: 80, 443, 4848,&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;8080, 8443&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="156.5" y="293" width="205" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="pMdDh9pp7wWAEe4GUN-L-8" value="AFFECTE" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="250" y="244" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pMdDh9pp7wWAEe4GUN-L-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="pMdDh9pp7wWAEe4GUN-L-9" target="pMdDh9pp7wWAEe4GUN-L-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pMdDh9pp7wWAEe4GUN-L-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="pMdDh9pp7wWAEe4GUN-L-9" target="pMdDh9pp7wWAEe4GUN-L-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pMdDh9pp7wWAEe4GUN-L-9" value="&amp;nbsp;Absence d&#39;en-têtes&amp;nbsp;de sécurité HTTP&lt;div&gt;X-Frame-Options,&lt;/div&gt;&lt;div&gt;X-Content-Type-Options&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="154" y="413" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="pMdDh9pp7wWAEe4GUN-L-10" value="Risque de clickjacking,&lt;div&gt;XSS, injection de&amp;nbsp;contenu                 &lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="504" y="423" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pMdDh9pp7wWAEe4GUN-L-12" value="&lt;div&gt;Serveur Node.js Express&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Port: 12174&amp;nbsp;&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="159" y="573" width="210" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pMdDh9pp7wWAEe4GUN-L-14" value="IMPACT" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="404" y="430" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pMdDh9pp7wWAEe4GUN-L-15" value="AFFECTE" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="257" y="520" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pMdDh9pp7wWAEe4GUN-L-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="pMdDh9pp7wWAEe4GUN-L-18" target="pMdDh9pp7wWAEe4GUN-L-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pMdDh9pp7wWAEe4GUN-L-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="pMdDh9pp7wWAEe4GUN-L-18" target="pMdDh9pp7wWAEe4GUN-L-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pMdDh9pp7wWAEe4GUN-L-18" value="VSFTPd 3.0.2&lt;div&gt;&amp;nbsp;Vulnérabilités connues&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="158" y="673" width="220" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="pMdDh9pp7wWAEe4GUN-L-19" value="Potentielle exécution&amp;nbsp;de code ou accès non&amp;nbsp;autorisé au système&amp;nbsp;" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="508" y="673" width="196" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="pMdDh9pp7wWAEe4GUN-L-20" value="&lt;div&gt;Serveur FTP&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Port: 11111&amp;nbsp;&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="163" y="833" width="210" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pMdDh9pp7wWAEe4GUN-L-21" value="IMPACT" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="408" y="683" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pMdDh9pp7wWAEe4GUN-L-22" value="AFFECTE" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="260" y="775" width="80" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
